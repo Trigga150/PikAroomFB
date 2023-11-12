@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="bg-warning">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+
+            <div class="collapse navbar-collapse  d-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>
+                        <a href="@Url.Action("Index", "Home")"><img src="~/images/home.png" alt="log Out" style="width:40px;height:40px;" /></a>
+                    </li>
+                    <li>
+                        <div class="text-light"><h5>Home</h5></div>
+
+                    </li>
+                    <li>
+                        <h5>_______________</h5>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("About", "Home")"><img src="~/images/about1.png" alt="log Out" style="width:40px;height:40px;" /></a>
+                    </li>
+                    <li>
+                        <div class="text-light"><h5>About Us</h5></div>
+
+                    </li>
+                    
+                    <li>
+                        <h5>_______________</h5>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Create", "Feedback")"><img src="~/images/feed.png" alt="log Out" style="width:40px;height:40px;" /></a>
+                    </li>
+                    <li>
+                        <div class="text-light"><h5>Feedback</h5></div>
+
+                    </li>
+                    <li>
+                        <h5>_______________</h5>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Create", "Apply")"><img src="~/images/apply.png" alt="log Out" style="width:40px;height:40px;" /></a>
+                    </li>
+                    <li>
+                        <div class="text-light"><h5>Apply</h5></div>
+
+                    </li>
+                    <li>
+                        <h5>_______________</h5>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Login", "Account")"><img src="~/images/login.png" alt="log Out" style="width:40px;height:40px;" /></a>
+                    </li>
+                    <li>
+                        <div class="text-light"><h5>Login</h5></div>
+
+                    </li>
+                    <li>
+                        <h5>_______________</h5>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("LoginAdmin", "Account")"><img src="~/images/admin.png" alt="log Out" style="width:40px;height:40px;" /></a>
+                    </li>
+                    <li>
+                        <div class="text-light"><h5>Admin</h5></div>
+
+                    </li>
+                    <li>
+                        <h5>__</h5>
+                    </li>
+
+                </ul>
+                
+            </div>
+        </div>
+        
+    </nav>
+    @*@while(@model IEnumerable<PikAroomFB.Models.Property>)
+            {
+
+            }*@
+
+    @*@foreach(var items in Model)
+     {
+
+     }*@
+
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

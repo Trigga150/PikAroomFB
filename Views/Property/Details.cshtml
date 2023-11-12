@@ -1,0 +1,89 @@
+﻿@model PikAroomFB.Models.Property
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Property</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PropertyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropertyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ERFNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ERFNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.AvailableSpace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvailableSpace)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfileImagePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfileImagePath)
+        </dd>
+
+        
+
+    </dl>
+</div>
+
+
+
+
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PropertyName }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

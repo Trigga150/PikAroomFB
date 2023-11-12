@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="bg-warning">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>
+                        <a href="@Url.Action("Index", "Home")"><img src="~/images/home.png" alt="log Out" style="width:40px;height:40px;" /></a>
+                    </li>
+                    <li>
+                        <div class="text-light"><h5>Home</h5></div>
+
+                    </li>
+                    <li>
+                        <h5>______________________________________________________________________________________________________________________________</h5>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("LogOff", "Account")"><img src="~/images/signOut.png" alt="log Out" style="width:40px;height:40px;" /></a>
+                    </li>
+                    <li>
+                        <div class="text-light"><h5>Logout</h5></div>
+
+                    </li>
+
+
+
+
+
+                    @*@if (HttpContext.Current.Session["AccessRight"].ToString() != null)
+                {
+                    if (HttpContext.Current.Session["AccessRight"].ToString() == "Admin")
+                    {
+                        //Show Contact index
+                        <li>@Html.ActionLink("Feedback", "Index", "Feedback", new { area = "" }, new { @class = "nav-link" })</li>
+
+                    }
+                }
+                @if (HttpContext.Current.Session["Email"].ToString() == null)
+                {
+
+                    <li>@Html.ActionLink("Sign Up", "SignUp", "Account", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Login", "Login", "Account", new { area = "" }, new { @class = "nav-link" })</li>
+                }
+                else if(HttpContext.Current.Session["Email"].ToString() != null)
+        {
+            <li>@Html.ActionLink(HttpContext.Current.Session["Email"].ToString() + "Log Out","LogOff","Account")</li>
+        }*@
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    
+   
+    <div class="container body-content">
+        @RenderBody()
+        
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

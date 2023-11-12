@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "UserLayout";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="text-center"><h2>Welcome buddy!!!</h2></div>
+
+<hr />
+<div class=" d-flex justify-content-between">
+    <div>
+        <a href="@Url.Action("Create", "Property")"><img src="~/images/add accomodation.png" alt="Add Accommodation" style="width:300px;height:300px;" /></a>
+        <h4>~*~*~*        Add Property ~*~*~*</h4>
+    </div>
+    <div>
+        <a href="@Url.Action("Create", "Feedback")"><img src="~/images/contact.png" alt="Feedback" style="width:300px;height:300px;" /></a>
+        <h4>~*~*~*               Send feedback ~*~*~*</h4>
+    </div>
+    <div>
+        <a href="@Url.Action("Create", "Apply")"><img src="~/images/apply.png" alt="Apply" style="width:300px;height:300px;" /></a>
+        <h4>*~*~*                    Apply ~*~*~*</h4>
+    </div>
+</div>
+

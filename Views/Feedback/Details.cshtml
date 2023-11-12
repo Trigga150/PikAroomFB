@@ -1,0 +1,50 @@
+﻿@model PikAroomFB.Models.Feedback
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Feedback Message Details</h2>
+
+<div>
+    <h4>Feedback</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResponseMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResponseMessage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Respond", "Edit", new { id = Model.FeedbackId }) |
+    @Html.ActionLink("Back to message list", "Index")
+</p>
